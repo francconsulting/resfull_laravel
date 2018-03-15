@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,3 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
     
 Route::resource('residentes', 'Residentes\ResidentesController');
+
+Route::post('/prueba', function (Request $request){
+    return $request->input('archivo');
+    //return view('prueba', array('namefile' => $request->file)));
+    
+});

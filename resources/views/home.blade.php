@@ -18,6 +18,15 @@
                 </div>
             </div>
         </div>
+        <div>
+            <form name="uploadFiles" id="uploadFiles"  action="prueba" method="POST">
+            {{ csrf_field() }}
+            <input type="text" name="archivo" id="archivo">
+               <!-- <input type="file" name="file" id="file">-->
+                
+                 <input type="submit" name="btn_submit" id="btn_submit" value="enviar">
+            </form>
+        </div>
     </div>
 </div>
 @endsection
